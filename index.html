@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>BlogZ</title>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
+</head>
+<body>
+    
+    <!-- Top Navigation Bar -->
+<nav class="top-nav">
+  <div class="nav-left">
+    <button class="menu-btn" id="menuBtn">
+      <span class="material-icons">menu</span>
+    </button>
+    <h1 class="nav-logo">BlogZ</h1>
+  </div>
+  <div class="nav-center">
+    <div class="search-box">
+      <span class="material-icons search-icon">search</span>
+      <input type="text" placeholder="Search">
+    </div>
+  </div>
+  <div class="nav-right">
+    <button class="write-btn" id="writeBtn">
+      <span class="material-icons">edit</span>
+      Write
+    </button>
+    <button class="notification-btn">
+      <span class="material-icons">notifications</span>
+    </button>
+    <button class="theme-toggle" id="themeToggle">
+      <span class="material-icons">light_mode</span>
+    </button>
+    <div class="auth-section">
+      <div class="not-logged-in">
+        <a href="#" class="login-link">Sign in</a>
+        <a href="#" class="signup-link">Sign up</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <h2>BlogZ</h2>
+  <ul>
+    <li class="nav-item active" data-page="homePage">
+      <span class="material-icons">home</span>
+      Home
+    </li>
+    <li class="nav-item" data-page="storiesPage">
+      <span class="material-icons">article</span>
+      Stories
+    </li>
+    <li class="nav-item" data-page="libraryPage">
+      <span class="material-icons">bookmark</span>
+      Library
+    </li>
+    <li class="nav-item" data-page="statsPage">
+      <span class="material-icons">analytics</span>
+      Stats
+    </li>
+    <li class="nav-item" data-page="profilePage">
+      <span class="material-icons">person</span>
+      Profile
+    </li>
+    <li class="nav-item" data-page="collaboratePage">
+      <span class="material-icons">group</span>
+      Collaborate
+    </li>
+  </ul>
+  
+  <h4>Topics</h4>
+  <ul>
+    <li>Technology</li>
+    <li>Health</li>
+    <li>Science</li>
+    <li>Business</li>
+    <li>Art</li>
+    <li>Food</li>
+    <li>History</li>
+  </ul>
+</div>
+
+<!-- Main Feed (Home Page) -->
+<div class="feed" id="homePage">
+  <div class="cards-container">
+    <div class="category-box psychology">
+      <div class="category-header">
+        <h2>Psychology</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=1" alt="Psychology">
+          </div>
+          <div class="card-content">
+            <h3>Understanding Human Behavior</h3>
+            <p>Explore the fascinating world of psychology and human behavior patterns.</p>
+            <div class="meta">5 min read • Psychology</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=2" alt="Psychology">
+          </div>
+          <div class="card-content">
+            <h3>Mindfulness and Mental Health</h3>
+            <p>Learn about the importance of mindfulness in maintaining good mental health.</p>
+            <div class="meta">7 min read • Mental Health</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-box writing">
+      <div class="category-header">
+        <h2>Writing</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=3" alt="Writing">
+          </div>
+          <div class="card-content">
+            <h3>The Art of Storytelling</h3>
+            <p>Master the fundamentals of compelling storytelling and narrative structure.</p>
+            <div class="meta">6 min read • Writing</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=4" alt="Writing">
+          </div>
+          <div class="card-content">
+            <h3>Creative Writing Tips</h3>
+            <p>Discover practical tips to enhance your creative writing skills.</p>
+            <div class="meta">4 min read • Creativity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-box productivity">
+      <div class="category-header">
+        <h2>Productivity</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=5" alt="Productivity">
+          </div>
+          <div class="card-content">
+            <h3>Time Management Strategies</h3>
+            <p>Effective techniques to manage your time and boost productivity.</p>
+            <div class="meta">8 min read • Productivity</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/400/200?random=6" alt="Productivity">
+          </div>
+          <div class="card-content">
+            <h3>Building Better Habits</h3>
+            <p>Learn how to create and maintain habits that lead to success.</p>
+            <div class="meta">5 min read • Self Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Action Button -->
+  <div class="fab">
+    <button class="fab-btn" id="fabBtn">
+      <span class="material-icons">edit</span>
+    </button>
+  </div>
+</div>
+
+     <!-- Library Section -->
+     <div class="library-section hidden" id="libraryPage">
+       <!-- Library Navigation Bar -->
+       <div class="library-nav-bar">
+    <div class="nav-left">
+      <!-- per-page menu button removed (top nav has the menu) -->
+    </div>
+    <div class="library-nav-right">
+      <button class="theme-toggle-library" id="themeToggleLibrary">
+      </button>
+    </div>
+  </div>
+
+       <!-- Library Content Container -->
+       <div class="library-content-container">
+         <!-- Library Header -->
+         <div class="library-header">
+           <h1 class="library-title">Your library</h1>
+           <button class="new-list-btn">
+             <span class="material-icons">add</span>
+             New list
+           </button>
+         </div>
+         
+         <!-- Library Navigation Tabs -->
+         <div class="library-nav-tabs">
+           <a href="#" class="library-tab active">Your lists</a>
+           <a href="#" class="library-tab">Saved lists</a>
+           <a href="#" class="library-tab">Highlights</a>
+           <a href="#" class="library-tab">Reading history</a>
+           <a href="#" class="library-tab">Responses</a>
+         </div>
+         
+         <!-- Create List Banner -->
+         <div class="create-list-banner">
+           <button class="close-banner-btn">
+             <span class="material-icons">close</span>
+           </button>
+           <div class="banner-content">
+             <div class="banner-text">
+               <h2>Create a list to easily organize and share stories</h2>
+               <button class="start-list-btn">Start a list</button>
+             </div>
+             <div class="banner-icon">
+               <div class="bookmark-circle">
+                 <span class="material-icons">bookmark_add</span>
+               </div>
+             </div>
+           </div>
+         </div>
+         
+         <!-- Reading Lists -->
+         <div class="library-lists">
+           <!-- Reading List Item 1 -->
+           <div class="library-list-item">
+             <div class="list-avatar">
+               <img src="https://picsum.photos/40/40?random=1" alt="Kartik Gupta">
+             </div>
+             <div class="list-details">
+               <div class="list-author">Kartik Gupta</div>
+               <h3 class="list-title">Reading list</h3>
+               <div class="list-meta">50 stories</div>
+             </div>
+             <div class="list-actions">
+               <button class="list-options-btn">
+                 <span class="material-icons">more_horiz</span>
+               </button>
+             </div>
+           </div>
+           
+           <!-- Reading List Item 2 -->
+           <div class="library-list-item">
+             <div class="list-avatar">
+               <img src="https://picsum.photos/40/40?random=2" alt="Kartik Gupta">
+             </div>
+             <div class="list-details">
+               <div class="list-author">Kartik Gupta</div>
+               <h3 class="list-title">For you !</h3>
+               <div class="list-meta">No stories</div>
+             </div>
+             <div class="list-actions">
+               <button class="list-options-btn">
+                 <span class="material-icons">more_horiz</span>
+               </button>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- Enhanced Profile Section -->
+<div class="profile-section hidden" id="profilePage">
+  <!-- Profile Navigation Bar -->
+  <div class="profile-nav-bar">
+    <div class="nav-left">
+      <!-- per-page menu button removed (top nav has the menu) -->
+    </div>
+    <div class="profile-nav-right">
+      <button class="theme-toggle-profile" id="themeToggleProfile">
+      </button>
+    </div>
+  </div>
+  
+  <!-- Profile Content Container -->
+  <div class="profile-content-container">
+    <!-- Left Side Spacer -->
+    <div class="profile-left-spacer"></div>
+    
+    <!-- Profile Main Content -->
+    <div class="profile-main-content">
+      <!-- Profile Header -->
+      <div class="profile-header-section">
+        <div class="profile-title-row">
+          <h1 class="profile-name">Kartik Gupta</h1>
+          <button class="profile-options-btn">
+            <span class="material-icons">more_horiz</span>
+          </button>
+        </div>
+        
+        <!-- Profile Navigation Tabs -->
+        <div class="profile-nav-tabs">
+          <a href="#" class="profile-tab active">Home</a>
+          <a href="#" class="profile-tab">Lists</a>
+          <a href="#" class="profile-tab">About</a>
+        </div>
+        
+        <!-- Pinned Section -->
+        <div class="pinned-section">
+          <div class="pinned-header">
+            <span class="material-icons">push_pin</span>
+            <span>Pinned</span>
+          </div>
+          
+          <!-- Story Items -->
+          <div class="story-item">
+            <h3 class="story-title">Changing the metro ! (Part -1)</h3>
+            <p class="story-excerpt">Delhi, Saal 2014, November ki dheere dheere chadhti sardiyan aur shaam 6:30 baje ka samay, aaj fir se metro mai beshumar bheed thi, ho...</p>
+            <div class="story-meta">
+              <span class="story-date">Mar 27</span>
+              <div class="story-stats">
+                <span class="stat-item">
+                  <span class="material-icons">visibility</span>
+                  6
+                </span>
+              </div>
+              <div class="story-actions">
+                <button class="bookmark-btn">
+                  <span class="material-icons">bookmark_border</span>
+                </button>
+                <button class="more-options">
+                  <span class="material-icons">more_horiz</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-item">
+            <h3 class="story-title">Galat...</h3>
+            <p class="story-excerpt">Pehle to sab sahi hi lag raha tha.</p>
+            <div class="story-meta">
+              <span class="story-date">Oct 15</span>
+              <div class="story-stats">
+                <!-- No stats for this one -->
+              </div>
+              <div class="story-actions">
+                <button class="bookmark-btn">
+                  <span class="material-icons">bookmark_border</span>
+                </button>
+                <button class="more-options">
+                  <span class="material-icons">more_horiz</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="story-item">
+            <h3 class="story-title">Teesra sira</h3>
+            <p class="story-excerpt">That ignored part of the story...</p>
+            <div class="story-meta">
+              <span class="story-date">Oct 15</span>
+              <div class="story-stats">
+                <!-- No stats for this one -->
+              </div>
+              <div class="story-actions">
+                <button class="bookmark-btn">
+                  <span class="material-icons">bookmark_border</span>
+                </button>
+                <button class="more-options">
+                  <span class="material-icons">more_horiz</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Profile Sidebar -->
+    <div class="profile-sidebar">
+      <div class="profile-card">
+        <div class="profile-avatar">
+          <img src="https://picsum.photos/80/80?random=1" alt="Kartik Gupta">
+        </div>
+        <h3 class="sidebar-name">Kartik Gupta</h3>
+        <p class="follower-count">31 followers</p>
+        <p class="profile-bio">I am a student in the school of life, with a great interest in writing and sharing my views on personal experiences.</p>
+        <button class="edit-profile-btn">Edit profile</button>
+      </div>
+      
+      <!-- Lists Section -->
+      <div class="profile-lists-section">
+        <h4 class="lists-title">Lists</h4>
+        <div class="list-item">
+          <div class="list-thumbnail">
+            <img src="https://picsum.photos/40/40?random=2" alt="Reading list">
+          </div>
+          <div class="list-info">
+            <h5 class="list-name">Reading list</h5>
+            <p class="list-count">50 stories</p>
+          </div>
+        </div>
+        <a href="#" class="view-all-link">View All</a>
+      </div>
+      
+      <!-- Footer Links -->
+      <div class="profile-footer-links">
+        <a href="#">Help</a>
+        <a href="#">Status</a>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+        <a href="#">Rules</a>
+        <a href="#">Terms</a>
+        <a href="#">Text to speech</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!-- Stories Section (keep hidden until explicitly shown) -->
+<section id="storiesPage" class="stories-section hidden">
+  <div class="stories-content-container">
+    <div class="stories-top-row">
+      <h1 class="stories-page-title">Stories</h1>
+      <button class="stories-import-btn">Import a story</button>
+    </div>
+
+    <nav class="stories-nav-tabs" role="tablist" aria-label="Stories tabs">
+      <a class="stories-tab active" data-tab="drafts" href="#" role="tab" aria-selected="true">Drafts <span class="tab-count">21</span></a>
+      <a class="stories-tab" data-tab="published" href="#" role="tab" aria-selected="false">Published <span class="tab-count">56</span></a>
+      <a class="stories-tab" data-tab="unlisted" href="#" role="tab" aria-selected="false">Unlisted</a>
+      <a class="stories-tab" data-tab="submissions" href="#" role="tab" aria-selected="false">Submissions</a>
+    </nav>
+
+    <!-- Tab contents -->
+    <div class="tab-content active" id="drafts-content" role="tabpanel" aria-hidden="false">
+      <div class="stories-list">
+        <div class="stories-table-header">
+          <div>Latest</div>
+          <div>Publication</div>
+          <div>Status</div>
+          <div></div>
+        </div>
+
+        <!-- draft rows -->
+        <article class="story-row">
+          <div class="story-left">
+            <img class="story-thumb" src="https://picsum.photos/96/96?random=101" alt="">
+            <div class="story-info">
+              <h3>4:45 ki prem kahani</h3>
+              <p>1 min read (9 words) · Updated 16h ago</p>
+            </div>
+          </div>
+          <div class="story-publication">—</div>
+          <div class="story-status">Draft</div>
+          <div class="story-options"><button class="options-btn" aria-label="Story options">•••</button></div>
+        </article>
+
+        <article class="story-row">
+          <div class="story-left">
+            <img class="story-thumb" src="https://picsum.photos/96/96?random=102" alt="">
+            <div class="story-info">
+              <h3>Bass ab nahain</h3>
+              <p>1 min read (40 words) · Updated 16h ago</p>
+            </div>
+          </div>
+          <div class="story-publication">—</div>
+          <div class="story-status">Draft</div>
+          <div class="story-options"><button class="options-btn" aria-label="Story options">•••</button></div>
+        </article>
+
+        <article class="story-row">
+          <div class="story-left">
+            <img class="story-thumb" src="https://picsum.photos/96/96?random=103" alt="">
+            <div class="story-info">
+              <h3>Itna Middle Class hoon...</h3>
+              <p>1 min read (110 words) · Updated Nov 8</p>
+            </div>
+          </div>
+          <div class="story-publication">—</div>
+          <div class="story-status">Draft</div>
+          <div class="story-options"><button class="options-btn" aria-label="Story options">•••</button></div>
+        </article>
+
+        <!-- add more draft rows as needed -->
+      </div>
+    </div>
+
+    <div class="tab-content" id="published-content" role="tabpanel" aria-hidden="true">
+      <div class="stories-list">
+        <!-- example published rows -->
+        <article class="story-row">
+          <div class="story-left">
+            <img class="story-thumb" src="https://picsum.photos/96/96?random=201" alt="">
+            <div class="story-info">
+              <h3>Nostalgia.</h3>
+              <p>Published 12h ago · 3 min read</p>
+            </div>
+          </div>
+          <div class="story-publication">—</div>
+          <div class="story-status">Published</div>
+          <div class="story-options"><button class="options-btn">•••</button></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tab-content" id="unlisted-content" role="tabpanel" aria-hidden="true">
+      <div class="stories-list">
+        <p class="empty-note">No unlisted stories yet.</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="submissions-content" role="tabpanel" aria-hidden="true">
+      <div class="stories-list">
+        <p class="empty-note">You have no submissions yet.</p>
+        <p><a class="explore-link" href="/publications">Explore publications</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<div class="stats-section hidden" id="statsPage">
+  <!-- Stats Navigation Bar -->
+  <div class="stats-nav-bar">
+    <div class="nav-left">
+      <button class="back-to-home" id="backToHomeFromStats" title="Home">
+        <span class="material-icons">arrow_back</span>
+        <span class="sr-only">Home</span>
+      </button>
+    </div>
+    <div class="stats-nav-right">
+      <button class="theme-toggle-stats" id="themeToggleStats">
+      </button>
+    </div>
+  </div>
+
+  <!-- Stats Content Container -->
+  <div class="stats-content-container">
+    <!-- Stats Navigation Tabs -->
+    <div class="stats-nav-tabs">
+      <a href="#" class="stats-tab active">Stories</a>
+      <a href="#" class="stats-tab">Audience</a>
+    </div>
+
+    <!-- Lifetime Section -->
+    <div class="stats-section-container">
+      <div class="stats-header">
+        <h2 class="stats-period-title">Lifetime</h2>
+        <div class="stats-dropdown">
+          <select class="dropdown-select">
+            <option value="latest">Latest</option>
+            <option value="oldest">Oldest</option>
+            <option value="most-views">Most Views</option>
+          </select>
+          <span class="material-icons">keyboard_arrow_down</span>
+        </div>
+      </div>
+      
+      <div class="stats-date-info">
+        <span>November 12, 2024 – Today (UTC) • Updated daily</span>
+      </div>
+
+      <!-- Lifetime Stories Table -->
+      <div class="stats-table">
+        <div class="stats-table-header">
+          <div class="header-story">Story</div>
+          <div class="header-presentations">Presentations <span class="info-icon material-icons">info</span></div>
+          <div class="header-views">Views</div>
+          <div class="header-reads">Reads</div>
+        </div>
+
+        <div class="stats-table-body">
+          <!-- Story Row 1 -->
+          <div class="stats-row">
+            <div class="story-column">
+              <h3 class="story-title">Galat...</h3>
+              <p class="story-details">4 min read • Oct 15, 2025 • <a href="#" class="view-story-link">View story</a></p>
+            </div>
+            <div class="presentations-column">42</div>
+            <div class="views-column">0</div>
+            <div class="reads-column">0</div>
+          </div>
+
+          <!-- Story Row 2 -->
+          <div class="stats-row">
+            <div class="story-column">
+              <h3 class="story-title">Teesra sira</h3>
+              <p class="story-details">4 min read • Oct 15, 2025 • <a href="#" class="view-story-link">View story</a></p>
+            </div>
+            <div class="presentations-column">43</div>
+            <div class="views-column">13</div>
+            <div class="reads-column">7</div>
+          </div>
+
+          <!-- Story Row 3 -->
+          <div class="stats-row">
+            <div class="story-column">
+              <h3 class="story-title">Is-paar us-paar</h3>
+              <p class="story-details">4 min read • Oct 14, 2025 • <a href="#" class="view-story-link">View story</a></p>
+            </div>
+            <div class="presentations-column">44</div>
+            <div class="views-column">0</div>
+            <div class="reads-column">0</div>
+          </div>
+
+          <!-- Story Row 4 -->
+          <div class="stats-row">
+            <div class="story-column">
+              <h3 class="story-title">Attachment Issue!</h3>
+              <p class="story-details">3 min read • Oct 7, 2025 • <a href="#" class="view-story-link">View story</a></p>
+            </div>
+            <div class="presentations-column">23</div>
+            <div class="views-column">5</div>
+            <div class="reads-column">2</div>
+          </div>
+
+          <!-- Story Row 5 -->
+          <div class="stats-row">
+            <div class="story-column">
+              <h3 class="story-title">Phone Addiction!</h3>
+              <p class="story-details">3 min read • Oct 5, 2025 • <a href="#" class="view-story-link">View story</a></p>
+            </div>
+            <div class="presentations-column">20</div>
+            <div class="views-column">0</div>
+            <div class="reads-column">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monthly Section -->
+    <div class="stats-section-container">
+      <div class="stats-header">
+        <h2 class="stats-period-title">Monthly</h2>
+        <div class="stats-dropdown">
+          <select class="dropdown-select">
+            <option value="october-2025">October 2025</option>
+            <option value="september-2025">September 2025</option>
+            <option value="august-2025">August 2025</option>
+          </select>
+          <span class="material-icons">keyboard_arrow_down</span>
+        </div>
+      </div>
+      
+      <div class="stats-date-info">
+        <span>October 1, 2025 – Today (UTC) • Updated hourly</span>
+      </div>
+
+      <!-- Monthly Stats Cards -->
+      <div class="monthly-stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">372</div>
+          <div class="stat-label">Presentations <span class="info-icon material-icons">info</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">67</div>
+          <div class="stat-label">Views</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15</div>
+          <div class="stat-label">Reads</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">+1 <span class="material-icons trending-up">trending_up</span></div>
+          <div class="stat-label">Followers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">0</div>
+          <div class="stat-label">Subscribers</div>
+        </div>
+      </div>
+
+      <!-- Chart Container -->
+      <div class="chart-container">
+        <canvas id="analyticsChart" width="800" height="300"></canvas>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <span class="legend-color views-color"></span>
+            <span>Views</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color reads-color"></span>
+            <span>Reads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Collaborate Section -->
+<div class="collaborate-section hidden" id="collaboratePage">
+  <!-- Collaborate Navigation Bar -->
+  <div class="collaborate-nav-bar">
+    <div class="nav-left">
+      <!-- back-to-home removed -->
+    </div>
+    <div class="collaborate-nav-right">
+      <button class="theme-toggle-collaborate" id="themeToggleCollaborate">
+      </button>
+    </div>
+  </div>
+  
+  <!-- Collaborate Content -->
+  <div class="collaborate-content">
+    <div class="collaborate-header">
+      <h1>Collaborate</h1>
+      <p>Connect with other writers and work on projects together</p>
+    </div>
+    
+    <div class="collaborate-features">
+      <div class="feature-card">
+        <span class="material-icons">group</span>
+        <h3>Find Collaborators</h3>
+        <p>Connect with writers who share your interests and style</p>
+        <button class="feature-btn">Explore Writers</button>
+      </div>
+      
+      <div class="feature-card">
+        <span class="material-icons">edit_note</span>
+        <h3>Joint Projects</h3>
+        <p>Work together on stories, articles, and creative projects</p>
+        <button class="feature-btn">Start Project</button>
+      </div>
+      
+      <div class="feature-card">
+        <span class="material-icons">feedback</span>
+        <h3>Peer Review</h3>
+        <p>Get feedback on your work from experienced writers</p>
+        <button class="feature-btn">Request Review</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register Section -->
+<div class="register-section hidden" id="registerPage">
+  <!-- Register Navigation Bar -->
+  <div class="register-nav-bar">
+    <div class="nav-left">
+      <!-- per-page menu button removed (top nav has the menu) -->
+    </div>
+    <div class="register-nav-right">
+      <button class="theme-toggle-register" id="themeToggleRegister">
+      </button>
+    </div>
+  </div>
+  
+  <!-- Register Content -->
+  <div class="register-content">
+    <div class="register-header">
+      <h1>Register Your Publication</h1>
+      <p>Connect your publication with BlogZ writers and expand your content network</p>
+    </div>
+
+    <div class="register-form-container">
+      <!-- Publication Registration Form -->
+      <div class="tab-form active" id="publication-form">
+        <div class="form-header">
+          <div class="form-icon">
+            <span class="material-icons">business</span>
+          </div>
+          <h2>Register Your Publication</h2>
+          <p>Join our network of publications and connect with talented writers</p>
+        </div>
+        
+        <form class="register-form publication-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pubName">Publication Name *</label>
+              <input type="text" id="pubName" name="pubName" placeholder="e.g., Tech Weekly, Daily Insights" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="pubCategory">Category *</label>
+              <select id="pubCategory" name="pubCategory" required>
+                <option value="">Select Category</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="health">Health & Wellness</option>
+                <option value="finance">Finance</option>
+                <option value="education">Education</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="science">Science</option>
+                <option value="politics">Politics</option>
+                <option value="sports">Sports</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="pubDescription">Publication Description *</label>
+            <textarea id="pubDescription" name="pubDescription" placeholder="Describe your publication, its focus, and target audience..." rows="4" required></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pubWebsite">Website URL</label>
+              <input type="url" id="pubWebsite" name="pubWebsite" placeholder="https://yourpublication.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="pubEmail">Contact Email *</label>
+              <input type="email" id="pubEmail" name="pubEmail" placeholder="editor@yourpublication.com" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pubSize">Publication Size *</label>
+              <select id="pubSize" name="pubSize" required>
+                <option value="">Select Size</option>
+                <option value="individual">Individual/Solo Publisher</option>
+                <option value="small">Small Team (2-10 people)</option>
+                <option value="medium">Medium Team (11-50 people)</option>
+                <option value="large">Large Organization (50+ people)</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="pubFrequency">Publishing Frequency *</label>
+              <select id="pubFrequency" name="pubFrequency" required>
+                <option value="">Select Frequency</option>
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="biweekly">Bi-weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="irregular">Irregular/As needed</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="contentTypes">Content Types You Accept *</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="articles">
+                <span class="checkmark"></span>
+                Articles & Blog Posts
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="interviews">
+                <span class="checkmark"></span>
+                Interviews
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="reviews">
+                <span class="checkmark"></span>
+                Reviews
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="tutorials">
+                <span class="checkmark"></span>
+                Tutorials & How-to Guides
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="opinion">
+                <span class="checkmark"></span>
+                Opinion Pieces
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="contentTypes" value="news">
+                <span class="checkmark"></span>
+                News & Updates
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="writerRequirements">Writer Requirements</label>
+            <textarea id="writerRequirements" name="writerRequirements" placeholder="Describe what you look for in writers (experience level, expertise areas, portfolio requirements, etc.)" rows="3"></textarea>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="responseTime">Response Time *</label>
+              <select id="responseTime" name="responseTime" required>
+                <option value="">Select Response Time</option>
+                <option value="24hours">Within 24 hours</option>
+                <option value="48hours">Within 48 hours</option>
+                <option value="week">Within a week</option>
+                <option value="month">Within a month</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="paymentOffered">Payment Offered</label>
+              <select id="paymentOffered" name="paymentOffered">
+                <option value="">Select Payment Type</option>
+                <option value="paid">Paid Opportunities</option>
+                <option value="unpaid">Unpaid/Exposure Only</option>
+                <option value="both">Both Paid and Unpaid</option>
+                <option value="negotiate">Negotiable</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="checkbox-item agreement">
+              <input type="checkbox" name="terms" required>
+              <span class="checkmark"></span>
+              I agree to BlogZ's <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="privacy-link">Privacy Policy</a>
+            </label>
+          </div>
+          
+          <button type="submit" class="register-btn publication-register-btn">
+            <span class="material-icons">business</span>
+            Register Publication
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <div class="register-footer">
+      <p>Need help? <a href="#" class="support-link">Contact Support</a></p>
+    </div>
+  </div>
+</div>
+
+     <!-- Right Panel -->
+<div class="right-panel">
+  <h3>BlogZ Recommends</h3>
+  <div class="BlogZ-recommend">
+    <h4>Finally, an internet standard for writers' rights vs. AI companies</h4>
+    <p class="meta">22h ago</p>
+  </div>
+  <div class="BlogZ-recommend">
+    <h4>Nature's Secret Codes: The Rivers Hidden Beneath Our Streets</h4>
+    <p class="meta">May 21</p>
+  </div>
+  <div class="BlogZ-recommend">
+    <h4>20 Hard-Won Fitness Lessons from My 20-Year Journey</h4>
+    <p class="meta">Aug 26</p>
+  </div>
+
+  <h3>Explore</h3>
+  <div class="tags">
+    <span>AI</span>
+    <span>Technology</span>
+    <span>Programming</span>
+    <span>Self Improvement</span>
+    <span>Machine Learning</span>
+    <span>Startups</span>
+    <span>Finance</span>  
+    <span>Cryptocurrency</span>
+    <span>Blockchain</span>
+    <span>Health</span>
+    <span>Writing</span>
+    <span>Business</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+<!-- small helper: make the stats-page Home button behave like other pages -->
+<script>
+  (function(){
+    function goHome(){
+      var navItem = document.querySelector('.nav-item[data-page="homePage"]');
+      if(navItem){
+        navItem.click();
+        return;
+      }
+      // fallback: show/hide pages manually
+      var pages = ['homePage','libraryPage','profilePage','storiesPage','statsPage','collaboratePage','registerPage'];
+      pages.forEach(function(id){
+        var el = document.getElementById(id);
+        if(!el) return;
+        if(id === 'homePage') el.classList.remove('hidden'); else el.classList.add('hidden');
+      });
+      window.scrollTo(0,0);
+    }
+
+    var btn = document.getElementById('backToHomeFromStats');
+    if(btn) btn.addEventListener('click', function(e){ e.preventDefault(); goHome(); });
+  })();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var menuBtn = document.getElementById('menuBtn') || document.querySelector('.menu-btn');
+  var sidebar = document.getElementById('sidebar') || document.querySelector('.sidebar');
+  if (!menuBtn || !sidebar) return;
+
+  // Inject minimal responsive CSS fallback if not present
+  if (!document.getElementById('sidebar-toggle-fix-style')) {
+    var css = document.createElement('style');
+    css.id = 'sidebar-toggle-fix-style';
+    css.textContent = '@media (max-width:900px){.sidebar{transform:translateX(-100%);transition:transform .22s ease;}.sidebar.open{transform:translateX(0);} }';
+    document.head.appendChild(css);
+  }
+
+  // Make sure the button is clickable above other elements
+  menuBtn.style.zIndex = menuBtn.style.zIndex || '1300';
+  menuBtn.setAttribute('aria-controls', sidebar.id || 'sidebar');
+
+  menuBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    sidebar.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(sidebar.classList.contains('open')));
+  });
+
+  // Close sidebar after selecting an item on small screens
+  var navItems = sidebar.querySelectorAll('.nav-item');
+  navItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      if (window.innerWidth < 900) sidebar.classList.remove('open');
+    });
+  });
+
+  // Close sidebar on ESC
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+      sidebar.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
+
+<script>
+  // simple page switcher: shows the page matching data-page and hides others
+  (function(){
+    var pages = Array.from(document.querySelectorAll('#homePage, #storiesPage, #libraryPage, #statsPage, #profilePage, #collaboratePage, #registerPage'));
+    function showPage(id){
+      pages.forEach(function(p){
+        if(!p) return;
+        if(p.id === id) p.classList.remove('hidden'); else p.classList.add('hidden');
+      });
+      window.scrollTo(0,0);
+    }
+    document.querySelectorAll('.nav-item[data-page]').forEach(function(item){
+      item.addEventListener('click', function(){
+        var page = this.dataset.page;
+        if(page) showPage(page);
+        // update active state
+        document.querySelectorAll('.nav-item').forEach(n=> n.classList.toggle('active', n===this));
+      });
+    });
+    // ensure initial view: show homePage by default
+    if(document.getElementById('homePage')) showPage('homePage');
+  })();
+</script>
+</body>
+</html>
